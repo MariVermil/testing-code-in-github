@@ -1,3 +1,5 @@
+![Test status](https://github.com/MariVermil/testing/actions/workflows/python-package-conda.yml/badge.svg)
+
 # ДЗ №2
 Были реализованы функции _min, _max, _sum, _mult.
 
