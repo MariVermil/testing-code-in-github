@@ -2,7 +2,7 @@ name: tg-notify
 
 on:
   workflow_run:
-    workflows: [Build]
+    workflows: [Python tests]
     types: [completed]
 
 jobs:
