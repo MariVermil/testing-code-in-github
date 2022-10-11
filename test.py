@@ -67,26 +67,6 @@ class IntegrationTest(unittest.TestCase):
                          min(a[0]) * max(a[1]) * sum(a[2]))
 
 
-class TestDrawGraph(unittest.TestCase):
-    def test_speed_graph(self):
-        MAX_N = int(1e7)
-        STEP = int(1e6)
-        N = [x for x in range(STEP, MAX_N + 1, STEP)]
-        A = 10000
-
-        execution_times = []
-        for n in N:
-            a = [random.randint(0, A) for _ in range(n)]
-            start_time = time.time()
-            main._min(a)
-            execution_times.append((time.time() - start_time) * 1000)
-
-        plt.plot(execution_times, N, color='pink')
-        plt.xlabel('Размер списка')
-        plt.ylabel('Время выполнения, с')
-        _ = plt.show()
-
-
 if __name__ == '__main__':
     unittest.main()
     print("Everything passed")
