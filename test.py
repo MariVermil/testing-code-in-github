@@ -13,6 +13,8 @@ class TestFunctionsValues(unittest.TestCase):
         a = random.sample(range(1000), 10)
         self.assertEqual(main._min(a), min(a))
         self.assertEqual(main._max(a), max(a))
+        self.assertEqual(main._min([]), None)
+        self.assertEqual(main._max([]), None)
 
     def test_sum_mult(self):
         self.assertEqual(main._sum((1, 2, 3, 4)), 10)
@@ -80,6 +82,8 @@ class TestDrawGraph(unittest.TestCase):
             execution_times.append((time.time() - start_time) * 1000)
 
         plt.plot(execution_times, N, color='pink')
+        plt.xlabel('Размер списка')
+        plt.ylabel('Время выполнения, с')
         _ = plt.show()
 
 

@@ -1,4 +1,6 @@
 def _min(a):
+    if len(a) == 0:
+        return None
     mina = a[0]
     for i in a:
         if i < mina:
@@ -7,6 +9,8 @@ def _min(a):
 
 
 def _max(a):
+    if len(a) == 0:
+        return None
     maxa = a[0]
     for i in a:
         if i > maxa:
