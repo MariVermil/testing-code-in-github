@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 class TestFunctionsValues(unittest.TestCase):
     def test_min_max(self):
-        self.assertEqual(main._min((1, 2, 3, 4)), 1)
+        self.assertEqual(main._min((1, 2, 3, 4)), 2)
         self.assertEqual(main._max((1, 2, 3, 4)), 4)
         a = random.sample(range(1000), 10)
         self.assertEqual(main._min(a), min(a))
